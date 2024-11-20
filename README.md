@@ -3,6 +3,7 @@ This repo has offcourse's RISC-V jail implementation
 
 ## Installation
 Dependencies [qemu-static](https://github.com/multiarch/qemu-user-static), [RISC-V-gnu-toolchain](https://github.com/riscv-collab/riscv-gnu-toolchain)
+
 Install `qemu-static` RISC-V64 version
 ```
 wget https://github.com/multiarch/qemu-user-static/releases/download/v7.2.0-1/qemu-riscv64-static
