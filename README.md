@@ -44,5 +44,5 @@ $RISCV_PATH/riscv64-unknown-elf-gdb main
 ```
 ## Useful resourses
 - [RISC-V gdb tutorial](https://shakti.org.in/docs/RISC-V-GDB-tutorial.pdf)
-- [RISC-V calling convention] (https://riscv.org/wp-content/uploads/2015/01/riscv-calling.pdf)
-- [pk syscall.h file] (https://github.com/riscv-software-src/riscv-pk/blob/master/pk/syscall.h)
+- [RISC-V calling convention](https://riscv.org/wp-content/uploads/2015/01/riscv-calling.pdf)
+- [pk syscall.h file](https://github.com/riscv-software-src/riscv-pk/blob/master/pk/syscall.h)
