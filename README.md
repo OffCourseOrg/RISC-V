@@ -2,7 +2,7 @@
 This repo has offcourse's RISC-V jail implementation
 
 ## Installation
-Dependencies (qemu-static)[https://github.com/multiarch/qemu-user-static], (RISC-V-gnu-toolchain)[https://github.com/riscv-collab/riscv-gnu-toolchain]
+Dependencies [qemu-static](https://github.com/multiarch/qemu-user-static), [RISC-V-gnu-toolchain](https://github.com/riscv-collab/riscv-gnu-toolchain)
 Install `qemu-static` RISC-V64 version
 ```
 wget https://github.com/multiarch/qemu-user-static/releases/download/v7.2.0-1/qemu-riscv64-static
@@ -41,3 +41,7 @@ $RISCV_PATH/riscv64-unknown-elf-gdb main
 (gdb) break main #or any other point
 (gdb) continue
 ```
+## Useful resourses
+- [RISC-V gdb tutorial](https://shakti.org.in/docs/RISC-V-GDB-tutorial.pdf)
+- [RISC-V calling convention] (https://riscv.org/wp-content/uploads/2015/01/riscv-calling.pdf)
+- [pk syscall.h file] [https://github.com/riscv-software-src/riscv-pk/blob/master/pk/syscall.h]
