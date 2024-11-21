@@ -1,6 +1,8 @@
 #include <stdio.h>
 
 int main(void) {
-  printf("Hello world\n");
+  char n;
+  n = getchar();
+  printf("YOur number: %c\n", n);
   return 0;
 }
