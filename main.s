@@ -2,10 +2,10 @@
 str: .ascii "Hello world\n"
 
 .text
-.global main
+.global _start
 
 
-main:
+_start:
 
   li a0, 1
   la a1, str
