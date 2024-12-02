@@ -11,5 +11,3 @@ counter: $(SOURCE)
 
 run: counter
 	$(RISCV_BIN)/qemu-riscv64-static -g 1235 $<
-
-	
