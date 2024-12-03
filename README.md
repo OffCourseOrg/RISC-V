@@ -11,7 +11,7 @@ sudo mv qemu-riscv64-static /bin
 ```
 Install RISC-V-gnu-toolchain with Newlib. All toolchain will be installed in path set in `$RISCV_PATH` variable. Later you can add `$RISCV_PATH` to your `$PATH` variable or link needed executables to `/bin`.
 ```
-git clone --detph=1 https://github.com/riscv/riscv-gnu-toolchain
+git clone --depth=1 https://github.com/riscv/riscv-gnu-toolchain
 cd riscv-gnu-toolchain
 RISCV_PATH=/opt/riscv/
 ./configure --prefix=$RISCV_PATH
