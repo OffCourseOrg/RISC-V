@@ -3,10 +3,10 @@ from gdb_remote_client import GdbRemoteClient
 import sys
 
 ARCH = 64;          #bits
-WL = int(ARCH / 8); #bytes
-HL = int(WL / 2);   #bytes
-DW = int(WL * 2);   #bytes
-QL = int(WL * 4);   #bytes
+SW = int(ARCH / 8); #bytes
+HW = int(SW / 2);   #bytes
+DW = int(SW * 2);   #bytes
+QL = int(SW * 4);   #bytes
 BIN_LEN = ARCH
 HEX_LEN = int(BIN_LEN / 4);
 
