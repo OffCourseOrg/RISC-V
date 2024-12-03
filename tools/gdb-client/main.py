@@ -6,7 +6,7 @@ ARCH = 64;          #bits
 SW = int(ARCH / 8); #bytes
 HW = int(SW / 2);   #bytes
 DW = int(SW * 2);   #bytes
-QL = int(SW * 4);   #bytes
+QW = int(SW * 4);   #bytes
 BIN_LEN = ARCH
 HEX_LEN = int(BIN_LEN / 4);
 
@@ -64,6 +64,3 @@ try:
 except:
     print(f"[ERROR] Server is not running on localhost:{port}")
     pass
-
-
-    port = int(sys.argv[1])
