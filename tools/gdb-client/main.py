@@ -18,6 +18,8 @@ regs = {
 }
 REG_LEN = len(regs)
 
+mem = {}
+
 def fixEndian(buffer):
     buffer = reverse(buffer)
     buf = ""
@@ -43,6 +45,19 @@ def p_regs(fetch = 0, keys = []):
         print(f"{key:>4}:", end="")
         print(hex(regs[key]))
 
+def hex2str(num, include_0x=0):
+    if (include_0x):
+        return hex(num)
+    return hex(num)[2::]
+
+def r_mem_sw():
+    if regs['sp'] == 0:
+        r_regs()
+    m = cli.cmd(f"m {hex2str(regs['sp'])},{SW}")
+    mem[regs['sp']] = int(fixEndian(m))
+
+
+
 
 def reverse(string):
     return string[::-1]
@@ -54,6 +69,18 @@ def r_regs():
         t = fixEndian(t);
         regs[key] = int(f"0x{t}", 16)
 
+def p_regs(fetch = 0, keys = []):
+    if (fetch):
+        r_regs();
+    for key in regs:
+        if(keys != [] and key not in keys):
+            continue
+        print(f"{key:>4}:", end="")
+        print(hex(regs[key]))
+
+def p_mem():
+    for key in mem:
+        print(f"{hex(key)}: {hex(mem[key])}")
 
 ####################################
 port = int(sys.argv[1])
