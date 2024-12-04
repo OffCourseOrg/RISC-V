@@ -8,7 +8,6 @@ from lib import Objdump
 
 ####################################
 port = int(sys.argv[1])
-obj_dump_path = sys.argv[2]
 try:
   cli = GdbRemoteClient("localhost", port)
   cli.connect()
@@ -18,4 +17,8 @@ except:
   print(f"[ERROR] Server is not running on localhost:{port}")
   pass
 
-obj = Objdump(obj_dump_path)
+try:
+  obj_dump_path = sys.argv[2]
+  obj = Objdump(obj_dump_path)
+except:
+  print("No Object Dump")
