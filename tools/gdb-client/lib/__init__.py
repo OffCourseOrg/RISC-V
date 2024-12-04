@@ -11,3 +11,4 @@ from .registers import Registers
 from .memory import Memory
 from .gdb import GDB
 from . import utils
+from .objdump import Objdump
