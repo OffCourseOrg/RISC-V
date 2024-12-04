@@ -17,7 +17,7 @@ class Registers:
       "a6": 0x0, "a7": 0x0, "s2": 0x0, "s3": 0x0, "s4": 0x0, "s5": 0x0, "s6": 0x0, "s7": 0x0, 
       "s8": 0x0, "s9": 0x0, "s10": 0x0, "s11": 0x0, "t3": 0x0, "t4": 0x0, "t5": 0x0, "t6": 0x0, "pc": 0x0
     }
-    self.fetch()
+    self.fetched = False;
 
   def __getitem__(self, key):
     return self.regs[key]
@@ -26,6 +26,7 @@ class Registers:
     return self.regs.keys()
 
   def fetch(self):
+    self.fetched = True;
     hex_string = self.gdb.cli.cmd("g")
     for key in self.regs:
       [t, hex_string] = utils.chop_str(hex_string, self.gdb.arch.hex)
