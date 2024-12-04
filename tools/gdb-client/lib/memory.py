@@ -21,4 +21,5 @@ class Memory:
 
   def print(self):
     for key in self.mem:
-        print(f"{hex(key)}: {hex(self.mem[key])}")
+        utils.print_hex(key, self.gdb.arch.hex, end=': ');
+        utils.print_hex(self.mem[key], self.gdb.arch.hex);
