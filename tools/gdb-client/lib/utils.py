@@ -25,3 +25,5 @@ def fixEndian(buffer):
         buf += buffer[i+1]
         buf += buffer[i]
     return buf;
+def print_hex(number, padding):
+    print(f"{number:#0{padding+2}x}") # +2 to offset 0x

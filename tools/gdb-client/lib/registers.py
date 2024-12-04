@@ -2,7 +2,7 @@
 # *  OffCourse::RISC-V
 # *		-GDB Client Library
 # *
-# *  Written by: Aleksandres
+# *  Written by: Aleksandrs
 # *  License: MIT
 # *
 
@@ -12,7 +12,7 @@ class Registers:
   def __init__(self, gdb):
     self.gdb = gdb
     self.regs = {
-      "zero": 0x0, "ra": 0x0, "sp": 0x0, "gp": 0x0, "tp": 0x0, "t0": 0x0, "t1": 0x0, "t2": 0x0, 
+      "xz": 0x0, "ra": 0x0, "sp": 0x0, "gp": 0x0, "tp": 0x0, "t0": 0x0, "t1": 0x0, "t2": 0x0, 
       "fp": 0x0, "s1": 0x0, "a0": 0x0, "a1": 0x0, "a2": 0x0, "a3": 0x0, "a4": 0x0, "a5": 0x0, 
       "a6": 0x0, "a7": 0x0, "s2": 0x0, "s3": 0x0, "s4": 0x0, "s5": 0x0, "s6": 0x0, "s7": 0x0, 
       "s8": 0x0, "s9": 0x0, "s10": 0x0, "s11": 0x0, "t3": 0x0, "t4": 0x0, "t5": 0x0, "t6": 0x0, "pc": 0x0
@@ -36,7 +36,8 @@ class Registers:
     for key in self.regs:
         if(keys != [] and key not in keys):
             continue
-        print(f"{key:<4}:", hex(self.regs[key]))
+        print(f"{key+':': <4} ", end='')
+        utils.print_hex(self.regs[key], self.gdb.arch.hex)
 
   def values(self):
     return self.regs.values()

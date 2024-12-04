@@ -2,7 +2,7 @@
 # *  OffCourse::RISC-V
 # *		-GDB Client Library
 # *
-# *  Written by: Aleksandres
+# *  Written by: Aleksandrs
 # *  License: MIT
 # *
 
